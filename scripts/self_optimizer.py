@@ -4,7 +4,7 @@ import json
 import re
 import sys
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 import os
 from pathlib import Path
 from typing import List, Dict, Any, Optional
@@ -128,7 +128,7 @@ class SelfOptimizer:
                 "delegation": ["subagent failed", "spawn failed", "agent failed"]
             }
 
-            time_cutoff = datetime.now() - timedelta(minutes=lookback_minutes)
+            time_cutoff = datetime.now(timezone.utc) - timedelta(minutes=lookback_minutes)
 
             for entry in chat_history_data:
                 try:
@@ -140,6 +140,9 @@ class SelfOptimizer:
                             continue
                         try:
                             message_time = datetime.fromisoformat(timestamp.replace('Z', '+00:00'))
+                            # Ensure message_time is timezone-aware for comparison
+                            if message_time.tzinfo is None:
+                                message_time = message_time.replace(tzinfo=timezone.utc)
                         except (ValueError, AttributeError):
                             continue
                         if message_time < time_cutoff:

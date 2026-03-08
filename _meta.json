@@ -1,17 +1,19 @@
 {
   "schema": "openclaw.skill.v1",
   "name": "self-optimizer",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "displayName": "Self Optimizer",
-  "description": "Analyzes OpenClaw logs, chat history, and root installation to propose self-improvement and optimization.",
+  "description": "Analyzes OpenClaw logs, chat history, and root installation to propose self-improvement and optimization suggestions. Detects errors, restarts, API issues, and configuration problems.",
   "author": "OpenClaw",
   "tags": [
     "optimization",
     "self-improvement",
     "analysis",
     "automation",
-    "python"
+    "monitoring",
+    "diagnostics"
   ],
   "platform": "openclaw",
-  "main": "scripts/self_optimizer.py"
+  "main": "scripts/self_optimizer.py",
+  "license": "MIT"
 }
