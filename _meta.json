@@ -5,7 +5,13 @@
   "displayName": "Self Optimizer",
   "description": "Analyzes OpenClaw logs, chat history, and root installation to propose self-improvement and optimization.",
   "author": "OpenClaw",
-  "tags": [],
+  "tags": [
+    "optimization",
+    "self-improvement",
+    "analysis",
+    "automation",
+    "python"
+  ],
   "platform": "openclaw",
   "main": "scripts/self_optimizer.py"
 }
