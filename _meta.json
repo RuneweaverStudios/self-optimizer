@@ -15,5 +15,10 @@
   ],
   "platform": "openclaw",
   "main": "scripts/self_optimizer.py",
-  "license": "MIT"
+  "license": "MIT",
+  "icon": "trending-up",
+  "color": "#e74c3c",
+  "requires": {
+    "anyBins": ["python3"]
+  }
 }

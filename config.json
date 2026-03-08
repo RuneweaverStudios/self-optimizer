@@ -1,0 +1,12 @@
+{
+  "analysis": {
+    "lookback_minutes": 60,
+    "lookback_lines": 500,
+    "output_format": "human",
+    "chat_history_path": null
+  },
+  "thresholds": {
+    "memory_warning_words": 5000,
+    "logs_warning_mb": 100
+  }
+}
