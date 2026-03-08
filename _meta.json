@@ -1,7 +1,11 @@
 {
-  "name": "Self Optimizer",
-  "author": "OpenClaw",
+  "schema": "openclaw.skill.v1",
+  "name": "self-optimizer",
   "version": "0.1.0",
+  "displayName": "Self Optimizer",
   "description": "Analyzes OpenClaw logs, chat history, and root installation to propose self-improvement and optimization.",
+  "author": "OpenClaw",
+  "tags": [],
+  "platform": "openclaw",
   "main": "scripts/self_optimizer.py"
 }
